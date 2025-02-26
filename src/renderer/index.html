@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+    />
+    <link rel="icon" href="assets/img/logo.ico" type="image/x-icon" />
+
+    <title>Hotmail Checker - @tas33n</title>
+    <link
+      href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../node_modules/toastify-js/src/toastify.css"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="app-container">
+      <button id="themeToggle" class="btn btn-sm btn-outline-secondary">
+        <i class="bi bi-sun"></i>
+      </button>
+      <div class="container-fluid mt-4">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="card mb-4 animate-card">
+              <div class="card-header">
+                <i class="bi bi-file-earmark-text"></i> File Input
+              </div>
+              <div class="card-body">
+                <div id="dropZone" class="drop-zone mb-3">
+                  <p>
+                    <i class="bi bi-cloud-upload"></i> Drag & drop a file here
+                    or
+                  </p>
+                  <button id="fileSelect" class="btn btn-primary">
+                    <i class="bi bi-folder2-open"></i> Select File
+                  </button>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <div class="input-group" style="max-width: 200px">
+                    <span class="input-group-text">Concurrent</span>
+                    <input
+                      type="number"
+                      id="concurrentInput"
+                      class="form-control"
+                      min="1"
+                      max="5"
+                      value="1"
+                    />
+                  </div>
+                  <div class="form-check form-switch">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="previewToggle"
+                    />
+                    <label class="form-check-label" for="previewToggle"
+                      >Preview Mode</label
+                    >
+                  </div>
+
+                  <!-- <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="filterToggle" />
+                  <label class="form-check-label" for="filterToggle">Enable Email Filtering</label>
+                </div> -->
+                </div>
+                <!-- filter mails -->
+                <div class="form-check form-switch">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="filterToggle"
+                  />
+                  <label class="form-check-label" for="filterToggle"
+                    >Enable Email Filtering</label
+                  >
+                </div>
+                <div class="position-relative mb-3">
+                  <div
+                    id="filterInputContainer"
+                    class="filter-input-container d-none"
+                  ></div>
+                  <div id="filterSuggestions" class="filter-suggestions"></div>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <button id="startButton" class="btn btn-success" disabled>
+                    <i class="bi bi-play-fill"></i> Start
+                  </button>
+                  <button id="stopButton" class="btn btn-danger" disabled>
+                    <i class="bi bi-stop-fill"></i> Stop
+                  </button>
+                  <button id="clearButton" class="btn btn-secondary">
+                    <i class="bi bi-trash"></i> Clear
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card animate-card">
+              <div class="card-header">
+                <i class="bi bi-terminal"></i> Console Output
+              </div>
+              <div class="card-body">
+                <div id="consoleOutput" class="console-output"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 animate-card">
+              <div class="card-header">
+                <i class="bi bi-info-circle"></i> Status
+              </div>
+              <div class="card-body">
+                <p>
+                  <i class="bi bi-file-earmark"></i> Selected File:
+                  <span id="selectedFile">None</span>
+                </p>
+                <p>
+                  <i class="bi bi-list-ol"></i> Total Data:
+                  <span id="totalData">0</span>
+                </p>
+                <p>
+                  <i class="bi bi-activity"></i> Status:
+                  <span id="status">Idle</span>
+                </p>
+                <p>
+                  <i class="bi bi-speedometer2"></i> Checks Per Minute:
+                  <span id="processRate">0</span>
+                </p>
+                <p>
+                  <i class="bi bi-check2-all"></i> Total Processed:
+                  <span id="totalProcessed">0</span>
+                </p>
+                <p>
+                  <i class="bi bi-check-circle"></i> Live:
+                  <span id="validEntries">0</span>
+                </p>
+                <p>
+                  <i class="bi bi-x-circle"></i> Dead:
+                  <span id="invalidEntries">0</span>
+                </p>
+                <p>
+                  <i class="bi bi-exclamation-triangle"></i> Failed:
+                  <span id="failedEntries">0</span>
+                </p>
+                <div class="progress mt-3">
+                  <div
+                    id="progressBar"
+                    class="progress-bar progress-bar-striped progress-bar-animated"
+                    role="progressbar"
+                    style="width: 0%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="card animate-card">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+              >
+                <span><i class="bi bi-info-circle"></i> About</span>
+                <button
+                  id="toggleAbout"
+                  class="btn btn-sm btn-outline-secondary"
+                >
+                  <i class="bi bi-chevron-up"></i>
+                </button>
+              </div>
+              <div class="card-body" id="aboutContent">
+                <h5>Hotmail Checker v1.0</h5>
+                <p>
+                  A powerful Hotmail Checker for educational purposes, powered
+                  by Puppeteer.
+                </p>
+                <p>
+                  Author:
+                  <a
+                    href="https://github.com/tas33n"
+                    target="_blank"
+                    rel="noreferrer"
+                    >@tas33n</a
+                  >
+                </p>
+                <p>
+                  Project Repository:
+                  <a
+                    href="https://github.com/tas33n/hotmail-checker"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub Repo
+                  </a>
+                </p>
+                <button id="donateButton" class="btn btn-primary mt-2">
+                  <i class="bi bi-coin"></i> Donate Crypto
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../node_modules/toastify-js/src/toastify.js"></script>
+    <script src="renderer.js"></script>
+  </body>
+</html>

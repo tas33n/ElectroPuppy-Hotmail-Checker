@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate Crypto</title>
+    <link
+      href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+
+    <style>
+      body {
+        background-color: transparent;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        overflow: hidden;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      .popup-container {
+        background-color: rgba(255, 255, 255, 0.911);
+      }
+      body.dark-theme .popup-container {
+        background-color: rgba(51, 51, 51, 0.95);
+      }
+      body.dark-theme .crypto-item {
+        background-color: #444;
+      }
+      body.dark-theme .crypto-address:hover {
+        color: #4dabf7;
+      }
+      body.dark-theme #closePopup {
+        color: #adb5bd;
+      }
+      body.dark-theme #closePopup:hover {
+        color: #f8f9fa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="popup-container">
+      <div
+        class="drag-handle d-flex justify-content-between align-items-center mb-4"
+      >
+        <h3 class="m-0">Donate Crypto</h3>
+        <button id="closePopup" class="btn btn-link p-0">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <div class="crypto-item">
+        <div class="d-flex flex-column flex-md-row">
+          <img
+            src="assets/img/lamb3rt.jpg"
+            alt="Binance Pay QR Code"
+            class="qr-code mb-3 mb-md-0"
+          />
+          <div>
+            <h5><i class="bi bi-wallet2 text-info"></i> Binance Pay</h5>
+            <p class="crypto-address" data-address="776870100">
+              Binance ID: 471390205
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="crypto-item">
+        <div class="d-flex flex-column flex-md-row">
+          <img
+            src="assets/img/tas33n-btc.jpg"
+            alt="Bitcoin QR Code"
+            class="qr-code mb-3 mb-md-0"
+          />
+          <div>
+            <h5>
+              <i class="bi bi-currency-bitcoin text-warning"></i> Bitcoin (BTC)
+            </h5>
+            <p
+              class="crypto-address"
+              data-address="bc1q3vyqhfw69f5ug74fj82zwtgszz6dv7mahdlv57"
+            >
+              bc1q3vyqhfw69f5ug74fj82zwtgszz6dv7mahdlv57
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="crypto-item">
+        <div class="d-flex flex-column flex-md-row">
+          <img
+            src="assets/img/tas33n-usdt.jpg"
+            alt="USDT QR Code"
+            class="qr-code mb-3 mb-md-0"
+          />
+          <div>
+            <h5><i class="bi bi-cash-coin text-success"></i> USDT (TRC-20)</h5>
+            <p
+              class="crypto-address"
+              data-address="TR95UPDfsB1Ammyj4w62xDuAJEA8wH5GSz"
+            >
+              TR95UPDfsB1Ammyj4w62xDuAJEA8wH5GSz
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="crypto-item">
+        <div class="d-flex flex-column flex-md-row">
+          <img
+            src="assets/img/tas33n-ltc.jpg"
+            alt="Litecoin QR Code"
+            class="qr-code mb-3 mb-md-0"
+          />
+          <div>
+            <h5>
+              <i class="bi bi-currency-exchange text-primary"></i> Litecoin
+              (LTC)
+            </h5>
+            <p
+              class="crypto-address"
+              data-address="LeaKUHCiAhRa6U3jrQa4bCAvaAfniJ6pXP"
+            >
+              LeaKUHCiAhRa6U3jrQa4bCAvaAfniJ6pXP
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const { ipcRenderer } = require("electron");
+
+      function applyTheme(theme) {
+        if (theme === "dark") {
+          document.body.classList.add("dark-theme");
+        } else {
+          document.body.classList.remove("dark-theme");
+        }
+      }
+
+      // Apply initial theme
+      ipcRenderer.invoke("get-native-theme").then((theme) => {
+        applyTheme(theme);
+      });
+
+      // Listen for theme changes
+      ipcRenderer.on("native-theme-changed", (event, theme) => {
+        applyTheme(theme);
+      });
+
+      document.getElementById("closePopup").addEventListener("click", () => {
+        ipcRenderer.send("close-donation-window");
+      });
+
+      document.querySelectorAll(".crypto-address").forEach((element) => {
+        element.addEventListener("click", () => {
+          const address = element.dataset.address;
+          navigator.clipboard.writeText(address).then(() => {
+            alert("Address copied to clipboard!");
+          });
+        });
+
+        element.addEventListener("mouseenter", () => {
+          element.style.textDecoration = "underline";
+        });
+
+        element.addEventListener("mouseleave", () => {
+          element.style.textDecoration = "none";
+        });
+      });
+    </script>
+  </body>
+</html>

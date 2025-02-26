@@ -1,0 +1,93 @@
+{
+  "name": "electropuppy-hotmail-checker",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A hobby project by @tas33n from github",
+  "copyright": "@tas33n 2025",
+  "main": "src/main/main.js",
+  "build": {
+    "appId": "com.tas33n.electropuppy-hotmail-checker",
+    "productName": "ElectroPuppy Hotmail Checker",
+    "copyright": "© 2025 tas33n",
+    "directories": {
+      "output": "build",
+      "buildResources": "assets"
+    },
+    "files": [
+      "src/",
+      "package.json",
+      "!logs/"
+    ],
+    "extraResources": [
+      {
+        "from": "public/",
+        "to": "public/",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "assets/icons/win/icon.ico",
+      "artifactName": "${productName}-Portable-${version}.exe"
+    },
+    "mac": {
+      "target": "zip",
+      "icon": "assets/icons/mac/icon.icns"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "tar.gz"
+      ],
+      "icon": "assets/icons/png"
+    },
+    "publish": {
+      "provider": "github",
+      "repo": "electropuppy-hotmail-checker",
+      "owner": "tas33n",
+      "releaseType": "release"
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "dev": "NODE_ENV=development npx electronmon . --no-warnings",
+    "make": "npx electron-builder"
+  },
+  "keywords": [
+    "electron"
+  ],
+  "author": "tas33n",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^7.6.1",
+    "@electron-forge/maker-deb": "^7.6.1",
+    "@electron-forge/maker-rpm": "^7.6.1",
+    "@electron-forge/maker-squirrel": "^7.6.1",
+    "@electron-forge/maker-zip": "^7.6.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.6.1",
+    "@electron-forge/plugin-fuses": "^7.6.1",
+    "@electron-forge/publisher-github": "^7.6.1",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^34.1.0",
+    "electron-builder": "^25.1.8",
+    "electron-prebuilt-compile": "^8.2.0",
+    "electron-squirrel-startup": "^1.0.1",
+    "electron-store": "^10.0.1",
+    "win-node-env": "^0.6.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "puppeteer": "^24.2.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "toastify-js": "^1.12.0"
+  },
+  "electronmon": {
+    "patterns": [
+      "!output/**"
+    ]
+  }
+}

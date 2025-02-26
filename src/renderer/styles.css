@@ -1,0 +1,341 @@
+:root {
+  color-scheme: light dark;
+  --primary-color: #007aff;
+  --secondary-color: #5856d6;
+  --success-color: #34c759;
+  --danger-color: #ff3b30;
+  --warning-color: #ffcc00;
+  --info-color: #5ac8fa;
+  --light-color: #f2f2f7;
+  --dark-color: #1c1c1e;
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #ffffff;
+  --card-border: #e5e5ea;
+  --console-bg: #2a2a2a;
+  --console-text: #00ff00;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #333;
+    color: white;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: #ddd;
+    color: black;
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+body.dark-theme {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --card-bg: #1c1c1e;
+  --card-border: #38383a;
+  --console-bg: #000000;
+}
+
+.app-container {
+  padding-top: 30px;
+}
+
+.titlebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background-color: var(--bg-color);
+  -webkit-app-region: drag;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  font-weight: bold;
+  border-bottom: 1px solid var(--card-border);
+}
+
+#themeToggle {
+  -webkit-app-region: no-drag;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 5px;
+  transition: color 0.3s;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+#themeToggle:hover {
+  color: var(--primary-color);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+  color: var(--text-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  /* transform: translateY(-5px); */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--card-border);
+  font-weight: bold;
+}
+
+.drop-zone {
+  border: 2px dashed var(--secondary-color);
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.drop-zone:hover {
+  border-color: var(--primary-color);
+}
+
+.console-output {
+  background-color: var(--console-bg);
+  color: var(--console-text);
+  font-family: "Courier New", Courier, monospace;
+  padding: 10px;
+  border-radius: 5px;
+  height: 300px;
+  overflow-y: auto;
+  font-size: 0.8rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  border-color: var(--success-color);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  border-color: var(--danger-color);
+}
+
+.btn-outline-secondary {
+  color: var(--text-color);
+  border-color: var(--text-color);
+}
+
+.animate-card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.progress {
+  height: 10px;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  background-color: var(--primary-color);
+}
+
+.log-timestamp {
+  color: #888;
+}
+
+.log-error {
+  color: var(--danger-color);
+}
+
+.log-warning {
+  color: var(--warning-color);
+}
+
+.log-success {
+  color: var(--success-color);
+}
+
+.log-info {
+  color: var(--info-color);
+}
+
+#donateButton {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+#donateButton:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* donation page */
+
+.popup-container {
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  max-width: 400px;
+  margin: 20px auto;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+.crypto-item {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.crypto-item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.crypto-address {
+  word-break: break-all;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.crypto-address:hover {
+  color: var(--primary-color);
+}
+
+.qr-code {
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+}
+
+.drag-handle {
+  cursor: move;
+  user-select: none;
+}
+
+#closePopup {
+  position: absolute;
+  top: 18px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#closePopup:hover {
+  color: #dc3545;
+}
+
+/* Custom scrollbar styles */
+.popup-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.popup-container::-webkit-scrollbar-track {
+  background: var(--card-bg);
+  border-radius: 0 10px 10px 0;
+  margin-top: 3px;
+  height: 30px;
+}
+
+.popup-container::-webkit-scrollbar-thumb {
+  background: var(--card-bg);
+  border-radius: 0 10px 10px 0;
+  margin-bottom: 30px;
+  height: 30px;
+}
+
+.popup-container::-webkit-scrollbar-thumb:hover {
+  background: var(--card-border);
+}
+
+.filter-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  min-height: 38px;
+  background-color: #fff;
+}
+
+.filter-input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: transparent;
+}
+
+.filter-suggestions {
+  position: absolute;
+  z-index: 1000;
+  background-color: white;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  max-height: 200px;
+  overflow-y: auto;
+  width: calc(100% - 30px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-item {
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.suggestion-item:hover {
+  background-color: #f8f9fa;
+}
+
+.badge {
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
