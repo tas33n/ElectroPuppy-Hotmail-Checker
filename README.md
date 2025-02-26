@@ -35,7 +35,7 @@
 
 ## Installation
 
-1. Download the latest release from the [releases page](https://github.com/tas33n/electropuppy/releases).
+1. Download the latest release from the [releases page](https://github.com/tas33n/ElectroPuppy-Hotmail-Checker/releases).
 2. Extract the ZIP file to your preferred location.
 3. Run the \`ElectroPuppy Hotmail Checker.exe\` file to start the application.
 
