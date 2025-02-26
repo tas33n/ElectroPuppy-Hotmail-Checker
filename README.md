@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/tas33n/ElectroPuppy-Hotmail-Checker/main/assets/icons/win/logo.ico" alt="ElectroPuppy Logo" width="200"/>
+  <img src="https://raw.githubusercontent.com/tas33n/ElectroPuppy-Hotmail-Checker/main/assets/icons/win/icon.ico" alt="ElectroPuppy Logo" width="200" style="border-radius:40%"/>
 </p>
 
 <h1 align="center">Hotmail Checker v1</h1>
@@ -19,9 +19,9 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/tas33n/electropuppy/main/assets/preview-light.png" alt="ElectroPuppy Light Mode" width="45%"/>
+  <img src="https://raw.githubusercontent.com/tas33n/ElectroPuppy-Hotmail-Checker/main/assets/preview-light.png" alt="ElectroPuppy Light Mode" width="45%"/>
   &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="https://raw.githubusercontent.com/tas33n/electropuppy/main/assets/preview-dark.png" alt="ElectroPuppy Dark Mode" width="45%"/>
+  <img src="https://raw.githubusercontent.com/tas33n/ElectroPuppy-Hotmail-Checker/main/assets/preview-dark.png" alt="ElectroPuppy Dark Mode" width="45%"/>
 </p>
 
 ## Features
