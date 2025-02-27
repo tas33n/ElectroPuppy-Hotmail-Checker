@@ -107,9 +107,9 @@ LTC Address:
 LeaKUHCiAhRa6U3jrQa4bCAvaAfniJ6pXP
 ```
 
-## License
+## Contact
 
-This project is licensed under the GPL-3 License. See the [LICENSE](LICENSE) file for details.
+For any inquiries, please contact [Telegram](https://t.me/lamb3rt).
 
 ---
 
