@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/tas33n/ElectroPuppy-Hotmail-Checker/main/assets/icons/win/icon.ico" alt="ElectroPuppy Logo" width="200" style="border-radius:40%"/>
+  <img src="assets/icons/win/icon.ico" alt="ElectroPuppy Logo" width="200" style="border-radius:40%"/>
 </p>
 
 <h1 align="center">Hotmail Checker v1</h1>
@@ -18,12 +18,6 @@
   <a href="#license">License</a>
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/tas33n/ElectroPuppy-Hotmail-Checker/main/assets/preview-light.png" alt="ElectroPuppy Light Mode" width="45%"/>
-  &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="https://raw.githubusercontent.com/tas33n/ElectroPuppy-Hotmail-Checker/main/assets/preview-dark.png" alt="ElectroPuppy Dark Mode" width="45%"/>
-</p>
-
 ## Features
 
 - Fast and efficient Hotmail/Outlook email authentication checking
@@ -32,6 +26,25 @@
 - Concurrent processing for improved speed
 - Portable Windows application (no installation required)
 - Built with Electron.js and Puppeteer.js
+
+## Preview
+
+<p align="center">
+  <img src="assets/prev-1.png" alt="Home page" width="80%"/>
+</p>
+
+<p align="center">
+  <img src="assets/prev-2.png" alt="Home page dark" width="80%"/>
+
+<p align="center">
+  <img src="assets/prev-3.png" alt="Operation Mode" width="80%"/>
+</p>
+
+<!-- <p align="center">
+  <a href="https://www.youtube.com/watch?v=example" target="_blank">
+    <img src="https://img.youtube.com/vi/example/0.jpg" alt="Video Preview" width="60%"/>
+  </a>
+</p> -->
 
 ## Installation
 
@@ -50,8 +63,9 @@
 
 ## Todo
 
-- [ ] Implement advanced email filtering with domain support
-- [ ] Add proxy support for enhanced privacy and avoiding rate limits
+- [ ] ~~Implement email filtering with domain support~~
+- [ ] Add proxy support
+- [ ] Mass mail sender
 - [ ] Optimize processing for faster results
 - [ ] Add support for other email providers
 
@@ -63,13 +77,39 @@
 
 If you find ElectroPuppy useful and want to support its development, consider donating:
 
-- Bitcoin (BTC): \`1ABC2DEF3GHI4JKL5MNO6PQR7STU8VWX9YZ\`
-- Ethereum (ETH): \`0x1ABC2DEF3GHI4JKL5MNO6PQR7STU8VWX9YZ\`
-- Litecoin (LTC): \`LABC2DEF3GHI4JKL5MNO6PQR7STU8VWX9YZ\`
+Binance ID:
+
+```
+471390205
+```
+
+USDT Address:
+
+```
+TR95UPDfsB1Ammyj4w62xDuAJEA8wH5GSz
+```
+
+Network:
+
+```
+TRC20
+```
+
+BTC Address:
+
+```
+bc1q3vyqhfw69f5ug74fj82zwtgszz6dv7mahdlv57
+```
+
+LTC Address:
+
+```
+LeaKUHCiAhRa6U3jrQa4bCAvaAfniJ6pXP
+```
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the GPL-3 License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
