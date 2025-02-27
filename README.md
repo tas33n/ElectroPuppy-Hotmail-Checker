@@ -63,9 +63,35 @@
 
 If you find ElectroPuppy useful and want to support its development, consider donating:
 
-- Bitcoin (BTC): \`1ABC2DEF3GHI4JKL5MNO6PQR7STU8VWX9YZ\`
-- Ethereum (ETH): \`0x1ABC2DEF3GHI4JKL5MNO6PQR7STU8VWX9YZ\`
-- Litecoin (LTC): \`LABC2DEF3GHI4JKL5MNO6PQR7STU8VWX9YZ\`
+Binance ID:
+
+```
+471390205
+```
+
+USDT Address:
+
+```
+TR95UPDfsB1Ammyj4w62xDuAJEA8wH5GSz
+```
+
+Network:
+
+```
+TRC20
+```
+
+BTC Address:
+
+```
+bc1q3vyqhfw69f5ug74fj82zwtgszz6dv7mahdlv57
+```
+
+LTC Address:
+
+```
+LeaKUHCiAhRa6U3jrQa4bCAvaAfniJ6pXP
+```
 
 ## License
 
