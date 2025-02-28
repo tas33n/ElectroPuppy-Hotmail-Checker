@@ -2,30 +2,45 @@
   <img src="assets/icons/win/icon.ico" alt="ElectroPuppy Logo" width="200" style="border-radius:40%"/>
 </p>
 
-<h1 align="center">Hotmail Checker v1</h1>
+<h1 align="center">ElectroPuppy Hotmail Checker</h1>
 
 <p align="center">
-  <strong>Experimental Hotmail/Outlook email auth checker.</strong>
+  <strong>⚡ Lightning-fast Hotmail/Outlook Email Authentication Tool</strong>
 </p>
 
 <p align="center">
+  <a href="https://github.com/tas33n/ElectroPuppy-Hotmail-Checker/releases/latest">
+    <img src="https://img.shields.io/github/v/release/tas33n/ElectroPuppy-Hotmail-Checker?include_prereleases&label=Latest%20Version&style=for-the-badge">
+  </a>
+  <a href="https://github.com/tas33n/ElectroPuppy-Hotmail-Checker/releases">
+    <img src="https://img.shields.io/github/downloads/tas33n/ElectroPuppy-Hotmail-Checker/total?style=for-the-badge&label=Downloads">
+  </a>
+  <a href="https://github.com/tas33n/ElectroPuppy-Hotmail-Checker/commits/main">
+    <img src="https://img.shields.io/github/last-commit/tas33n/ElectroPuppy-Hotmail-Checker?style=for-the-badge&label=Last%20Update">
+  </a>
+</p>
+
+<div align="center">
   <a href="#features">Features</a> •
+  <a href="#-whats-new">What's New</a> •
   <a href="#installation">Installation</a> •
   <a href="#usage">Usage</a> •
-  <a href="#todo">Todo</a> •
-  <a href="#disclaimer">Disclaimer</a> •
-  <a href="#donation">Donation</a> •
-  <a href="#license">License</a>
-</p>
+  <a href="#-roadmap">Roadmap</a> •
+  <a href="#donation">Donation</a>
+</div>
 
-## Features
+---
 
-- Fast and efficient Hotmail/Outlook email authentication checking
-- User-friendly interface with dark and light modes
-- Email filtering capabilities
-- Concurrent processing for improved speed
-- Portable Windows application (no installation required)
-- Built with Electron.js and Puppeteer.js
+## 🚀 Features
+
+- **High-Speed Checking** - Concurrent processing engine
+- **Theme Support** - Light/Dark/System modes
+- **Smart Filtering** - Domain-based email filtering
+- **Portable** - No installation required
+- **Stealth Mode** - Puppeteer-extra with stealth plugins
+- **Real-time Stats** - Live progress tracking
+
+---
 
 ## Preview
 
@@ -40,81 +55,80 @@
   <img src="assets/prev-3.png" alt="Operation Mode" width="80%"/>
 </p>
 
-<!-- <p align="center">
-  <a href="https://www.youtube.com/watch?v=example" target="_blank">
-    <img src="https://img.youtube.com/vi/example/0.jpg" alt="Video Preview" width="60%"/>
-  </a>
-</p> -->
+---
 
-## Installation
+## 📥 Installation
 
 1. Download the latest release from the [releases page](https://github.com/tas33n/ElectroPuppy-Hotmail-Checker/releases).
 2. Extract the ZIP file to your preferred location.
 3. Run the \`ElectroPuppy Hotmail Checker.exe\` file to start the application.
 
-## Usage
+<!-- ```bash
+# Windows Portable Edition
+1. Download latest release from [Releases Page]
+2. Extract ZIP to preferred location
+3. Run 'ElectroPuppy Hotmail Checker.exe'
 
-1. Launch ElectroPuppy.
-2. Click on "Select File" or drag and drop a text file containing email:password combinations.
-3. Set the number of concurrent processes (1-5).
-4. Enable email filtering if desired and add filter criteria.
-5. Click "Start" to begin the checking process.
-6. View results in real-time and export them when finished.
+# Developer Setup
+1. Clone repo & install dependencies
+   git clone https://github.com/tas33n/ElectroPuppy-Hotmail-Checker
+   cd ElectroPuppy-Hotmail-Checker
+   npm install
+2. Start in development mode
+   npm run dev
+``` -->
 
-## Todo
+> **Note**  
+> Portable version requires Windows 10/11  
+> Antivirus may flag executable - add exclusion if needed
 
-- [ ] ~~Implement email filtering with domain support~~
-- [ ] Add proxy support
-- [ ] Mass mail sender
-- [ ] Optimize processing for faster results
-- [ ] Add support for other email providers
+---
 
-## Disclaimer
+## 🕹️ Usage
 
-⚠️ **Warning**: ElectroPuppy is intended for educational purposes only, demonstrating the use of Electron.js and Puppeteer.js in Node.js projects. The author and contributors are not responsible for any misuse or illegal activities performed with this software. Use at your own risk and ensure you have permission to check the authenticity of the email accounts you're verifying.
+1. **Import Data**  
+   Drag-n-drop or select email:password list
+2. **Configure**  
+   Set concurrency (1-5 threads) and filters
+3. **Launch**  
+   Click Start and monitor real-time results
 
-## Donation
+---
 
-If you find ElectroPuppy useful and want to support its development, consider donating:
+## 🗺️ Roadmap
 
-Binance ID:
+- ✅ ~~Email Filtering v1~~ (Implemented)
+- 🚧 Proxy Support (In Development)
+- 🔜 Cross-Platform Compatibility
+- 🔜 Advanced Reporting System
+- 🔜 Two-Factor Authentication Support
 
-```
-471390205
-```
+[View Full Roadmap](https://github.com/tas33n/ElectroPuppy-Hotmail-Checker/issues/1)
 
-USDT Address:
+---
 
-```
-TR95UPDfsB1Ammyj4w62xDuAJEA8wH5GSz
-```
+## ⚠️ Disclaimer
 
-Network:
+> This software is intended for **educational purposes only**. Users are solely responsible for ensuring they have proper authorization to verify any email accounts. The developers assume no liability for misuse.
 
-```
-TRC20
-```
+---
 
-BTC Address:
+## 💖 Support the Project
 
-```
-bc1q3vyqhfw69f5ug74fj82zwtgszz6dv7mahdlv57
-```
+Help keep ElectroPuppy evolving! Your donations fuel development:
 
-LTC Address:
+| Cryptocurrency | Address                                      |
+| -------------- | -------------------------------------------- |
+| **BTC**        | `bc1q3vyqhfw69f5ug74fj82zwtgszz6dv7mahdlv57` |
+| **USDT**       | `TR95UPDfsB1Ammyj4w62xDuAJEA8wH5GSz` (TRC20) |
+| **LTC**        | `LeaKUHCiAhRa6U3jrQa4bCAvaAfniJ6pXP`         |
 
-```
-LeaKUHCiAhRa6U3jrQa4bCAvaAfniJ6pXP
-```
-
-## Contact
-
-For any inquiries, please contact [Telegram](https://t.me/lamb3rt).
+Or support via **Binance Pay**:  
+`471390205`
 
 ---
 
 <p align="center">
-  Developed with ❤️ by <a href="https://github.com/tas33n">@tas33n</a>
-  <br>
-  Enhanced  by GPT4
+  Developed with ❤️ by <a href="https://github.com/tas33n">@tas33n</a>  
+  Enhanced by GPT-4 | 📧 <a href="https://t.me/lamb3rt">Contact via Telegram</a>
 </p>
