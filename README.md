@@ -119,7 +119,7 @@ Help keep ElectroPuppy evolving! Your donations fuel development:
 
 | Cryptocurrency | Address                                      |
 | -------------- | -------------------------------------------- |
-| **BTC**        | `bc1q3vyqhfw69f5ug74fj82zwtgszz6dv7mahdlv57` |
+| **BTC**        | `16NyoNtkDk8uHejqNsKkhpc8RyPEEfu1m9` (Bitcoin)|
 | **USDT**       | `TR95UPDfsB1Ammyj4w62xDuAJEA8wH5GSz` (TRC20) |
 | **LTC**        | `LeaKUHCiAhRa6U3jrQa4bCAvaAfniJ6pXP`         |
 
